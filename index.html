@@ -541,7 +541,12 @@ const CFG = {
 
   // CHAVE API ANTHROPIC (para o assistente IA)
   // Coloque aqui a sua nova chave depois de revogar a anterior
-  api_key: ""
+  api_key: "curl https://api.anthropic.com/v1/messages \
+  --header "x-api-key: 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" \
+  --header "anthropic-version: 2023-06-01" \
+  --header "content-type: application/json" \
+  --data '{"model": "claude-sonnet-4-6", "max_tokens": 1024,
+    "messages": [{"role": "user", "content": "Hello, world"}]}'"
 };
 // ════════════════════════════════════════════
 
